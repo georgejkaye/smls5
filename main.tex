@@ -1,0 +1,130 @@
+\usepackage{figures/tikzit}
+\usepackage{graphicx}
+\usepackage[inkscapelatex=false]{svg}
+\usepackage{amssymb}
+\usepackage{xparse}
+\usepackage{stmaryrd}
+\usepackage{tikz-cd}
+\usepackage{mathtools}
+
+\newcommand{\svg}[3]{\raisebox{#1em}{\scalebox{#2}{\includesvg{imgs/#3}}}}
+
+\newcommand{\await}{\iftoggle{static}{}{\pause}}
+
+\tikzset{
+    invisible/.style={opacity=0},
+    visible on/.style={alt={#1{}{invisible}}},
+    alt/.code args={<#1>#2#3}{%
+        \alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}}%
+    }
+}
+
+\input{macros/sets}
+\input{macros/category}
+\input{macros/circuits}
+\input{macros/streams}
+
+\input{figures/circuits.tikzdefs}
+\input{figures/circuits.tikzstyles}
+
+\definecolor{back}{HTML}{f8f8f2}
+\newcommand{\bgcolour}{back}
+
+\graphicspath{{./imgs/}}
+
+\usetheme[
+  background=light,
+  numbering=counter,
+  block=fill,
+  sectionpage=none
+]{metropolis}
+
+% FiraFonts
+\usepackage[sfdefault]{FiraSans}
+\usepackage{FiraMono}
+% Use thinner fonts
+\makeatletter
+\def\bfseries@sf{medium}
+\def\mdseries@sf{l}
+\makeatother
+
+\definecolor{backg}{RGB}{9,72,61}
+\definecolor{accent}{RGB}{0,150,136}
+
+\definecolor{dracback}{RGB}{40, 42, 54}
+\definecolor{dracfore}{RGB}{248, 248, 242}
+\definecolor{dractitle}{RGB}{56, 58, 89}
+\definecolor{dracblock}{RGB}{98, 114, 164}
+\definecolor{draccent}{RGB}{255, 121, 198}
+
+\setbeamercolor{normal text}{bg=dracfore}
+\setbeamercolor{frametitle}{bg=dractitle, fg=dracfore}
+\setbeamercolor{title separator}{fg=draccent}
+\setbeamercolor{progress bar}{fg=draccent, bg=draccent}
+\setbeamercolor{block title}{fg=dracfore, bg=dracblock}
+\setbeamercolor{alerted text}{fg=draccent}
+
+\newtheorem{axiom}{Axiom(s)}
+
+\title{A Fully Compositional Theory of Digital Circuits}
+\author{
+    \texorpdfstring{
+        \large\textbf{George Kaye} \\[0.25em]
+        \footnotesize University of Birmingham
+    }{
+        George Kaye
+    }
+}
+\date{
+    \texorpdfstring{
+        15 February 2024 -- PPLV Research Seminar
+    }{
+        15 February 2024
+    }
+}
+
+\begin{document}
+    \maketitle
+    \input{sections/intro}
+    \input{sections/syntax}
+    \input{sections/denotational}
+    \input{sections/operational}
+    \input{sections/equational}
+    \input{sections/graphs}
+
+    \begin{frame}
+        \frametitle{To the end}
+
+        \centering
+        \Large
+
+        \await
+
+        Three different semantics for sequential digital circuits
+
+        \await
+
+        \vspace{1em}
+
+        \begin{tikzcd}[ampersand replacement=\&,row sep=large]
+            \&
+            \text{Denotational}
+            \arrow[visible on=<\iftoggle{static}{1-}{4-}>,leftrightarrow,swap]{dl}{\cong}
+            \&
+            \\
+            \text{Operational}
+            \arrow[visible on=<\iftoggle{static}{1-}{4-}>,leftrightarrow,swap]{rr}{\cong}
+            \&
+            \&
+            \text{Algebraic}
+            \arrow[visible on=<\iftoggle{static}{1-}{4-}>,leftrightarrow, swap]{ul}{\cong}
+        \end{tikzcd}
+
+        \await\await
+
+        \vspace{1em}
+
+        Can adapt for automatic reasoning using \alert{graph rewriting}
+
+    \end{frame}
+\end{document}
