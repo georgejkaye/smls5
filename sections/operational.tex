@@ -14,9 +14,9 @@
     \vspace{2em}
 
     \(
-        \llbracket\dsptikzfig{strings/category/f}[box=F,colour=seq]\rrbracket
-        =
-        \llbracket\dsptikzfig{strings/category/f}[box=G,colour=seq]\rrbracket
+    \llbracket\dsptikzfig{strings/category/f}[box=f,colour=seq]\rrbracket
+    =
+    \llbracket\dsptikzfig{strings/category/f}[box=g,colour=seq]\rrbracket
     \)
 
     \vspace{2em}
@@ -57,10 +57,10 @@
 
     \centering
 
-    \dsptikzfig{strings/category/f}[box=F,colour=seq]
+    \dsptikzfig{strings/category/f}[box=f,colour=seq]
     \await
     \Large=\normalsize
-    \dsptikzfig{circuits/productivity/trace-delay}[core=\hat{F},state=\listvar{v}]
+    \dsptikzfig{circuits/productivity/trace-delay}[core=\hat{f},state=\listvar{v}]
 
     \vspace{1em}
     \Large
@@ -95,15 +95,17 @@
 
     \await
 
-    \dsptikzfig{strings/category/f}[box=F,colour=seq]
+    \dsptikzfig{strings/category/f}[box=f,colour=seq]
     \Large\(\reductions\)\normalsize
-    \dsptikzfig{circuits/productivity/pre-mealy-form}[core=\hat{F},state=\listvar{s}]
+    \dsptikzfig{circuits/productivity/pre-mealy-form}[core=\hat{f},state=\listvar{s}]
 
 \end{frame}
 \begin{frame}
     \frametitle{The sticking point}
 
     \centering
+
+    \Large
 
     What are we going to do about the non-delay-guarded trace?
 
@@ -120,9 +122,9 @@
     \vspace{1em}
 
     \scalebox{0.75}{
-        \dsptikzfig{circuits/examples/cyclic-combinational/circuit-scirc}
+        \dsptikzfig{circuits/examples/cyclic-combinational/circuit-scirc-applied-control}
         \(\Rightarrow\)
-        \dsptikzfig{circuits/examples/cyclic-combinational/reduced-true}
+        \dsptikzfig{circuits/examples/cyclic-combinational/reduced-false}
     }
 
     \await
@@ -155,7 +157,7 @@
     \[
         \dsptikzfig{circuits/instant-feedback/f0-box}
         \coloneqq
-        \dsptikzfig{circuits/instant-feedback/f0-definition}
+        \dsptikzfig{circuits/instant-feedback/f0-definition}[box=f]
         \await
         \qquad
         \dsptikzfig{circuits/instant-feedback/fkp1-box}
@@ -164,7 +166,7 @@
     \]
     \await
     \[
-        \dsptikzfig{circuits/instant-feedback/equation-lhs}[box=F,trace=x]
+        \dsptikzfig{circuits/instant-feedback/equation-lhs}[box=f,trace=x]
         \quad
         \reduction
         \quad
@@ -196,11 +198,11 @@
     \normalsize
 
     \[
-        \dsptikzfig{strings/category/f}[box=F,colour=seq]
+        \dsptikzfig{strings/category/f}[box=f,colour=seq]
         \quad
         \reductions
         \quad
-        \dsptikzfig{circuits/productivity/mealy-form}[core=\tilde{F},state=\overline{s}]
+        \dsptikzfig{circuits/productivity/mealy-form}[core=\tilde{f},state=\overline{s}]
     \]
 
 \end{frame}
@@ -215,9 +217,9 @@
     \normalsize
 
     \begin{gather*}
-        \dsptikzfig{circuits/productivity/productive-goal-lhs}[box=F]
+        \dsptikzfig{circuits/productivity/productive-goal-lhs}[box=f]
         \reductions
-        \dsptikzfig{circuits/productivity/productive-goal-rhs}[box=G]
+        \dsptikzfig{circuits/productivity/productive-goal-rhs}[box=g]
     \end{gather*}
 
     \await
@@ -256,11 +258,11 @@
 
     \begin{lemma}
         For every
-        \dsptikzfig{strings/category/f}[box=F,colour=comb]
+        \dsptikzfig{strings/category/f}[box=f,colour=comb]
         there exists
         \dsptikzfig{circuits/components/values/vs}[val=\listvar{w}]
         s.t.
-        \dsptikzfig{circuits/components/circuits/f-applied}[box=F,colour=comb]
+        \dsptikzfig{circuits/components/circuits/f-applied}[box=f,colour=comb]
         \(\reduction\)
         \dsptikzfig{circuits/components/values/vs}[val=\listvar{w}].
     \end{lemma}
@@ -278,11 +280,11 @@
     \normalsize
 
     \begin{gather*}
-        \visible<\iftoggle{static}{1}{2-}>{\dsptikzfig{circuits/axioms/generalised-streaming-lhs}[box=F]}
+        \visible<\iftoggle{static}{1}{2-}>{\dsptikzfig{circuits/axioms/generalised-streaming-lhs}[box=f]}
         \visible<\iftoggle{static}{1}{3-}>{\coloneqq}
-        \visible<\iftoggle{static}{1}{3-}>{\dsptikzfig{circuits/axioms/generalised-streaming-lhs-verbose}[box=F]}
+        \visible<\iftoggle{static}{1}{3-}>{\dsptikzfig{circuits/axioms/generalised-streaming-lhs-verbose}[box=f]}
         \visible<\iftoggle{static}{1}{4-}>{\reduction}
-        \visible<\iftoggle{static}{1}{4-}>{\dsptikzfig{circuits/axioms/generalised-streaming-rhs}[box=F]}
+        \visible<\iftoggle{static}{1}{4-}>{\dsptikzfig{circuits/axioms/generalised-streaming-rhs}[box=f]}
         \qquad
         \visible<\iftoggle{static}{1}{5-}>{\text{\alert{'Streaming'}}}
     \end{gather*}
@@ -294,21 +296,21 @@
     \vspace{-2em}
 
     \begin{gather*}
-        \visible<\iftoggle{static}{1}{2-}>{\dsptikzfig{circuits/productivity/productive-goal-lhs}[box=F]}
+        \visible<\iftoggle{static}{1}{2-}>{\dsptikzfig{circuits/productivity/productive-goal-lhs}[box=f]}
         \visible<\iftoggle{static}{1}{3-}>{\reduction}
-        \visible<\iftoggle{static}{1}{3-}>{\dsptikzfig{circuits/productivity/mealy-form-applied}[core=\hat{F}]}
+        \visible<\iftoggle{static}{1}{3-}>{\dsptikzfig{circuits/productivity/mealy-form-applied}[core=\hat{f}]}
         \visible<\iftoggle{static}{1}{4-}>{\reduction}
-        \visible<\iftoggle{static}{1}{4-}>{\dsptikzfig{circuits/productivity/mealy-form-streamed}[core=\hat{F}]}
-        \\[0.5em]
+        \visible<\iftoggle{static}{1}{4-}>{\dsptikzfig{circuits/productivity/mealy-form-streamed}[core=\hat{f}]}
+        \\[0.75em]
         \visible<\iftoggle{static}{1}{5-}>{\reduction}
-        \visible<\iftoggle{static}{1}{5-}>{\dsptikzfig{circuits/productivity/mealy-form-instant}[core=\hat{F}]}
+        \visible<\iftoggle{static}{1}{5-}>{\dsptikzfig{circuits/productivity/mealy-form-instant}[core=\hat{f}]}
         \visible<\iftoggle{static}{1}{6-}>{\reduction}
-        \visible<\iftoggle{static}{1}{6-}>{\dsptikzfig{circuits/productivity/mealy-form-instant-registers}[core=\hat{F}]}
-        \\[0.5em]
+        \visible<\iftoggle{static}{1}{6-}>{\dsptikzfig{circuits/productivity/mealy-form-instant-registers}[core=\hat{f}]}
+        \\[0.75em]
         \visible<\iftoggle{static}{1}{7-}>{\reduction}
-        \visible<\iftoggle{static}{1}{7-}>{\dsptikzfig{circuits/productivity/mealy-form-produced}[core=\hat{F}]}
+        \visible<\iftoggle{static}{1}{7-}>{\dsptikzfig{circuits/productivity/mealy-form-produced}[core=\hat{f}]}
         \visible<\iftoggle{static}{1}{8-}>{\coloneqq}
-        \visible<\iftoggle{static}{1}{8-}>{\dsptikzfig{circuits/productivity/productive-goal-rhs}[box=G]}
+        \visible<\iftoggle{static}{1}{8-}>{\dsptikzfig{circuits/productivity/productive-goal-rhs}[box=g]}
     \end{gather*}
 \end{frame}
 
@@ -349,7 +351,7 @@
 
     \await
 
-    Sound and complete \alert{operational semantics}
-
+    \LARGE
+    Sound and complete \alert{operational semantics}!
 
 \end{frame}
