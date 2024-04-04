@@ -43,7 +43,9 @@
         \dsptikzfig{strings/structure/monoid/unitality-r-lhs}
         =
         \dsptikzfig{strings/structure/monoid/unitality-r-rhs}
-        \\[1em]
+        \\[0.25em]
+        \rule{\textwidth}{0.1mm}
+        \\[0.5em]
         \dsptikzfig{circuits/axioms/bottom-delay-lhs}
         =
         \dsptikzfig{circuits/axioms/bottom-delay-rhs}
@@ -55,9 +57,9 @@
 
     \Large
     By these equations, \(
-        \dsptikzfig{strings/category/f}[box=F,colour=seq]
-        =
-        \dsptikzfig{circuits/productivity/mealy-form}
+    \dsptikzfig{strings/category/f}[box=F,colour=seq]
+    =
+    \dsptikzfig{circuits/productivity/mealy-form}
     \)
 
 \end{frame}
@@ -77,7 +79,7 @@
     \centering
     \LARGE
 
-    Say we have a procedure \(|-|\) for
+    Say we have a procedure \(\lvert-\rvert\) for
     establishing a \alert{canonical circuit} for a function
     \(\morph{f}{\valuetuple{m}}{\valuetuple{n}}\)
 
@@ -85,7 +87,7 @@
 
     \vspace{1em}
 
-    A circuit is \alert{normalised} if it is in the image of \(|-|\)
+    A circuit is \alert{normalised} if it is in the image of \(\lvert-\rvert\)
 
     \await
 
@@ -94,12 +96,120 @@
     What equations are needed to \\ normalise any circuit?
 
 \end{frame}
+\begin{frame}
+    \frametitle{It's completely normal}
+
+    \centering
+
+    \vspace{1em}
+
+    \begin{minipage}{0.4\textwidth}
+        \centering
+        \scalebox{0.6}{
+            \(
+            \dsptikzfig{circuits/axioms/belnap/translation/explosion-lhs}
+            =
+            \dsptikzfig{circuits/axioms/belnap/translation/explosion-rhs}
+            \)
+        }
+    \end{minipage}
+    \begin{minipage}{0.55\textwidth}
+        \centering
+        \scalebox{0.6}{
+            \(
+            \dsptikzfig{circuits/axioms/belnap/translation/join-and-lhs}
+            =
+            \dsptikzfig{circuits/axioms/belnap/translation/join-and-rhs}
+            \)
+            \quad
+            \(
+            \dsptikzfig{circuits/axioms/belnap/translation/de-morgan-and-lhs}
+            =
+            \dsptikzfig{circuits/axioms/belnap/translation/de-morgan-and-rhs}
+            \)
+        }
+        \\[0.25em]
+        \rule{\textwidth}{0.1mm}
+        \\[0.5em]
+        \scalebox{0.6}{
+            \(
+            \dsptikzfig{circuits/axioms/belnap/translation/join-or-lhs}
+            =
+            \dsptikzfig{circuits/axioms/belnap/translation/join-or-rhs}
+            \)
+            \quad
+            \(
+            \dsptikzfig{circuits/axioms/belnap/translation/de-morgan-or-lhs}
+            =
+            \dsptikzfig{circuits/axioms/belnap/translation/de-morgan-or-rhs}
+            \)
+        }
+    \end{minipage}
+    \\[0.25em]
+    \rule{\textwidth}{0.1mm}
+    \\[0.5em]
+    \scalebox{0.7}{
+        \(\dsptikzfig{circuits/axioms/belnap/translation/not-fork-lhs}
+        =
+        \dsptikzfig{circuits/axioms/belnap/translation/not-fork-rhs}\)
+        \quad
+        \(\dsptikzfig{circuits/axioms/belnap/translation/and-fork-lhs}
+        =
+        \dsptikzfig{circuits/axioms/belnap/translation/and-fork-rhs}\)
+        \quad
+        \(\dsptikzfig{circuits/axioms/belnap/translation/or-fork-lhs}
+        =
+        \dsptikzfig{circuits/axioms/belnap/translation/or-fork-rhs}\)
+        \quad
+        \(\dsptikzfig{strings/structure/bialgebra/merge-copy-lhs}
+        =
+        \dsptikzfig{strings/structure/bialgebra/merge-copy-rhs}\)
+    }
+    \\[0.25em]
+    \rule{\textwidth}{0.1mm}
+    \\[0.5em]
+    \scalebox{0.7}{
+        \(\dsptikzfig{strings/structure/bialgebra/init-copy-lhs}
+        =
+        \dsptikzfig{strings/structure/bialgebra/init-copy-rhs}\)
+        \quad
+        \(\dsptikzfig{circuits/axioms/belnap/translation/and-and-idempotent-lhs}
+        =
+        \dsptikzfig{circuits/axioms/belnap/translation/and-and-idempotent-rhs}\)
+        \quad
+        \(\dsptikzfig{circuits/axioms/belnap/translation/or-or-idempotent-lhs}
+        =
+        \dsptikzfig{circuits/axioms/belnap/translation/or-or-idempotent-rhs}\)
+    }
+    \\[0.25em]
+    \rule{\textwidth}{0.1mm}
+    \\[0.5em]
+    \scalebox{0.7}{
+        \(\dsptikzfig{circuits/axioms/belnap/translation/bot-and-lhs}
+        =
+        \dsptikzfig{circuits/axioms/belnap/translation/bot-x-rhs}\)
+        \quad
+        \(\dsptikzfig{circuits/axioms/belnap/translation/bot-or-lhs}
+        =
+        \dsptikzfig{circuits/axioms/belnap/translation/bot-x-rhs}\)
+        \quad
+        \(\dsptikzfig{circuits/axioms/belnap/translation/bot-and-lhs}
+        =
+        \dsptikzfig{circuits/axioms/belnap/translation/bot-x-rhs}\)
+        \quad
+        \(\dsptikzfig{circuits/axioms/belnap/double-negation-lhs}
+        =
+        \dsptikzfig{circuits/axioms/belnap/double-negation-rhs}\)
+    }
+\end{frame}
 
 \begin{frame}
     \frametitle{It's completely normal}
-    \vspace{-1em}
+    \centering
 
-    \begin{gather*}
+    \vspace{1em}
+
+    \scalebox{0.7}{\(
         \dsptikzfig{circuits/axioms/belnap/and-associativity-lhs}
         =
         \dsptikzfig{circuits/axioms/belnap/and-associativity-rhs}
@@ -107,7 +217,16 @@
         \dsptikzfig{circuits/axioms/belnap/or-associativity-lhs}
         =
         \dsptikzfig{circuits/axioms/belnap/or-associativity-rhs}
-        \\
+        \quad
+        \dsptikzfig{circuits/axioms/belnap/and-commutativity-lhs}
+        =
+        \dsptikzfig{circuits/axioms/belnap/and-commutativity-rhs}
+        \)
+    }
+    \\[0.25em]
+    \rule{\textwidth}{0.1mm}
+    \\[0.5em]
+    \scalebox{0.7}{\(
         \dsptikzfig{circuits/axioms/belnap/and-or-distributivity-lhs}
         =
         \dsptikzfig{circuits/axioms/belnap/and-or-distributivity-rhs}
@@ -115,19 +234,16 @@
         \dsptikzfig{circuits/axioms/belnap/or-and-distributivity-lhs}
         =
         \dsptikzfig{circuits/axioms/belnap/or-and-distributivity-rhs}
-        \\
-        \dsptikzfig{circuits/axioms/belnap/and-commutativity-lhs}
-        =
-        \dsptikzfig{circuits/axioms/belnap/and-commutativity-rhs}
         \quad
         \dsptikzfig{circuits/axioms/belnap/or-commutativity-lhs}
         =
         \dsptikzfig{circuits/axioms/belnap/or-commutativity-rhs}
-        \quad
-        \dsptikzfig{circuits/axioms/belnap/and-idempotent-lhs}
-        =
-        \dsptikzfig{circuits/axioms/belnap/and-idempotent-rhs}
-        \\
+        \)
+    }
+    \\[0.25em]
+    \rule{\textwidth}{0.1mm}
+    \\[0.5em]
+    \scalebox{0.7}{\(
         \dsptikzfig{circuits/axioms/belnap/absorption-2-lhs}
         =
         \dsptikzfig{circuits/axioms/belnap/absorption-2-rhs}
@@ -139,7 +255,12 @@
         \dsptikzfig{circuits/axioms/belnap/or-idempotent-lhs}
         =
         \dsptikzfig{circuits/axioms/belnap/or-idempotent-rhs}
-        \\
+        \)
+    }
+    \\[0.25em]
+    \rule{\textwidth}{0.1mm}
+    \\[0.5em]
+    \scalebox{0.7}{\(
         \dsptikzfig{circuits/axioms/belnap/translation/and-fork-lhs}
         =
         \dsptikzfig{circuits/axioms/belnap/translation/and-fork-rhs}
@@ -147,7 +268,16 @@
         \dsptikzfig{circuits/axioms/belnap/translation/or-fork-lhs}
         =
         \dsptikzfig{circuits/axioms/belnap/translation/or-fork-rhs}
-        \\
+        \quad
+        \dsptikzfig{circuits/axioms/belnap/and-idempotent-lhs}
+        =
+        \dsptikzfig{circuits/axioms/belnap/and-idempotent-rhs}
+        \)
+    }
+    \\[0.25em]
+    \rule{\textwidth}{0.1mm}
+    \\[0.5em]
+    \scalebox{0.7}{\(
         \dsptikzfig{strings/structure/comonoid/commutativity-rhs}
         =
         \dsptikzfig{strings/structure/comonoid/commutativity-lhs}
@@ -159,7 +289,118 @@
         \dsptikzfig{strings/structure/comonoid/unitality-l-lhs}
         =
         \dsptikzfig{strings/structure/comonoid/unitality-l-rhs}
-    \end{gather*}
+        \)
+    }
+\end{frame}
+\begin{frame}
+    \frametitle{Changing the states}
+
+    \centering
+    \Large
+
+    How to translate between \(
+    \dsptikzfig{circuits/productivity/mealy-form}[core=|f|, colour=comb]
+    \)
+    and \(
+    \dsptikzfig{circuits/productivity/mealy-form}[core=|g|, state=\listvar{t}, colour=comb]
+    \)?
+
+    \await
+
+    \vspace{1em}
+
+    First \alert{encode} one set of states into another
+
+    \vspace{0.5em}
+
+    \(
+    \dsptikzfig{circuits/algebraic/encoder-applied}[state=\listvar{s}]
+    =
+    \dsptikzfig{circuits/components/values/vs}[val=\listvar{t}]
+    \quad
+    \dsptikzfig{circuits/algebraic/decoder-applied}[state=\listvar{t}]
+    =
+    \dsptikzfig{circuits/components/values/vs}[val=\listvar{s}]
+    \)
+
+    \await
+    \vspace{1em}
+    \normalsize
+    (and for any future states)
+
+\end{frame}
+\begin{frame}
+    \frametitle{Changing the states}
+
+    \centering
+
+    \vspace{1em}
+
+    \scalebox{0.7}{\(
+        \dsptikzfig{circuits/productivity/mealy-form}[core=|f|,delay=x, colour=seq]
+        =
+        \dsptikzfig{circuits/algebraic/state-encoding}[core=|f|,delay=x]
+        \)
+    }
+    \\[0.25em]
+    \rule{\textwidth}{0.1mm}
+    \\[0.5em]
+    \scalebox{0.7}{\(
+        \dsptikzfig{circuits/axioms/gate-lhs}
+        =
+        \dsptikzfig{circuits/axioms/gate-rhs}
+        \quad
+        \dsptikzfig{circuits/axioms/fork-lhs}
+        =
+        \dsptikzfig{circuits/axioms/fork-rhs}
+        \quad
+        \dsptikzfig{circuits/axioms/join-lhs}
+        =
+        \dsptikzfig{circuits/axioms/join-rhs}
+        \)
+    }
+    \\[0.25em]
+    \rule{\textwidth}{0.1mm}
+    \\[0.5em]
+    \scalebox{0.7}{\(
+        \dsptikzfig{circuits/axioms/stub-lhs}
+        =
+        \dsptikzfig{strings/monoidal/empty}
+        \quad
+        \dsptikzfig{circuits/axioms/delay-fork-lhs}
+        =
+        \dsptikzfig{circuits/axioms/delay-fork-rhs}
+        \quad
+        \dsptikzfig{circuits/axioms/bottom-delay-lhs}
+        =
+        \dsptikzfig{circuits/axioms/bottom-delay-rhs}
+        \quad
+        \dsptikzfig{circuits/axioms/streaming-lhs}
+        =
+        \dsptikzfig{circuits/axioms/streaming-rhs}[gate=p]
+        \)
+    }
+    \\[0.25em]
+    \rule{\textwidth}{0.1mm}
+    \\[0.5em]
+    \scalebox{0.7}{\(
+        \dsptikzfig{strings/structure/comonoid/unitality-l-lhs}
+        =
+        \dsptikzfig{strings/structure/comonoid/unitality-l-rhs}
+        \quad
+        \dsptikzfig{strings/structure/monoid/associativity-lhs}
+        =
+        \dsptikzfig{strings/structure/monoid/associativity-rhs}
+        \quad
+        \dsptikzfig{strings/structure/monoid/commutativity-lhs}
+        =
+        \dsptikzfig{strings/structure/monoid/commutativity-rhs}
+        \quad
+        \dsptikzfig{strings/structure/bialgebra/merge-copy-lhs}
+        =
+        \dsptikzfig{strings/structure/bialgebra/merge-copy-rhs}
+        \)
+    }
 \end{frame}
 \begin{frame}
     \frametitle{It's completely normal}
@@ -180,121 +421,22 @@
     \Large
     The cores may \alert{not} have the same semantics!
 
-    \await
-
-    \vspace{0.5em}
-
-    \textbf{Idea:} \alert{encode} circuits so their state words have \\ length
-    equal to the number of states
-
 \end{frame}
 \begin{frame}
-    \frametitle{State your intention}
+    \frametitle{Think about what matters}
 
     \centering
-    \LARGE
 
-    Need to know the number of states: \alert{isolate} the state transition
-    and output
-
-    \normalsize
-    \vspace{1em}
     \(
-        \dsptikzfig{circuits/productivity/mealy-form}[core=F,colour=seq]
-        =
-        \dsptikzfig{circuits/algebraic/encoding}[transition={F_0},output={F_1}]
+    \dsptikzfig{circuits/productivity/mealy-form}[core=|f|]
+    =
+    \dsptikzfig{circuits/productivity/mealy-form}[core=|g|]
     \)
-\end{frame}
-\begin{frame}
-    \frametitle{Cartesian doubt}
 
-    \centering
+    \vspace{1em}
+
     \Large
-
-    Need equations to make the fork \alert{natural} and \alert{unital}
-
-    \normalsize
-
-    \vspace{1em}
-
-    \(
-        \dsptikzfig{strings/structure/cartesian/naturality-copy-lhs}[box=F,colour=seq]
-        =
-        \dsptikzfig{strings/structure/cartesian/naturality-copy-rhs}[box=F,colour=seq]
-        \quad
-        \quad
-        \dsptikzfig{strings/structure/comonoid/unitality-l-lhs}
-        =
-        \dsptikzfig{strings/structure/comonoid/unitality-l-rhs}
-        \quad
-        \dsptikzfig{strings/structure/comonoid/unitality-r-lhs}
-        =
-        \dsptikzfig{strings/structure/comonoid/unitality-r-rhs}
-    \)
-
-    \await
-    \normalsize
-
-    \vspace{1em}
-
-    \(
-        \dsptikzfig{strings/category/f-1-2}[box=F,colour=seq]
-        =
-        \dsptikzfig{circuits/algebraic/isolate-cartesian/isolate-step-1}[box=F,colour=seq]
-        =
-        \dsptikzfig{circuits/algebraic/isolate-cartesian/isolate}[box=F,colour=seq]
-    \)
-
-
-\end{frame}
-\begin{frame}
-    \frametitle{Cartesian doubt}
-
-    \begin{gather*}
-        \dsptikzfig{circuits/axioms/fork-gate-lhs}[gate=p,dom=m,cod=n]
-        =
-        \dsptikzfig{circuits/axioms/fork-gate-rhs}[gate=p,dom=m,cod=n]
-        \quad
-        \dsptikzfig{circuits/axioms/fork-lhs}
-        =
-        \dsptikzfig{circuits/axioms/fork-rhs}
-        \quad
-        \dsptikzfig{circuits/axioms/delay-fork-lhs}
-        =
-        \dsptikzfig{circuits/axioms/delay-fork-rhs}
-        \\
-        \dsptikzfig{strings/structure/frobenius/copy-merge-lhs}
-        =
-        \dsptikzfig{strings/structure/frobenius/copy-merge-rhs}
-        \quad
-        \dsptikzfig{strings/structure/bialgebra/merge-copy-lhs}
-        =
-        \dsptikzfig{strings/structure/bialgebra/merge-copy-rhs}
-    \end{gather*}
-
-\end{frame}
-\begin{frame}
-    \frametitle{Encoding}
-
-    \centering
-    \LARGE
-    Now add an \alert{encoding} equation
-
-    \await
-    \normalsize
-    \vspace{1em}
-
-    \(
-        \dsptikzfig{circuits/algebraic/encoding}[state=\listvar{s},transition=F,output=G]
-        =
-        \dsptikzfig{circuits/algebraic/encoding-longstate}[state=\gamma_{\leq}(\listvar{s}),transition={\transitiontranslation{f}},output={\outputtranslation{g}}]
-    \)
-
-    \await
-
-    \vspace{1em}
-    \scriptsize
-    (I'm hiding some of the internal machinations here)
+    where \(f\) and \(g\) `agree on the states that matter'
 
 \end{frame}
 
@@ -317,6 +459,6 @@
 
     \await
 
-    Sound and complete \alert{algebraic semantics}
+    Sound and complete \alert{algebraic semantics}!
 
 \end{frame}
