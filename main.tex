@@ -77,54 +77,53 @@
 }
 \date{
     \texorpdfstring{
-        15 February 2024 -- PPLV Research Seminar
+        05 April 2024 -- SMLS5
     }{
-        15 February 2024
+        05 April 2024
     }
 }
 
 \begin{document}
-    \maketitle
-    \input{sections/intro}
-    \input{sections/syntax}
-    \input{sections/denotational}
-    \input{sections/operational}
-    \input{sections/equational}
-    \input{sections/graphs}
+\maketitle
+\input{sections/intro}
+\input{sections/syntax}
+% \input{sections/denotational}
+% \input{sections/operational}
+% \input{sections/equational}
 
-    \begin{frame}
-        \frametitle{To the end}
+\begin{frame}
+    \frametitle{To the end}
 
-        \centering
-        \Large
+    \centering
+    \Large
 
-        \await
+    \await
 
-        Three different semantics for sequential digital circuits
+    Three different semantics for sequential digital circuits
 
-        \await
+    \await
 
-        \vspace{1em}
+    \vspace{1em}
 
-        \begin{tikzcd}[ampersand replacement=\&,row sep=large]
-            \&
-            \text{Denotational}
-            \arrow[visible on=<\iftoggle{static}{1-}{4-}>,leftrightarrow,swap]{dl}{\cong}
-            \&
-            \\
-            \text{Operational}
-            \arrow[visible on=<\iftoggle{static}{1-}{4-}>,leftrightarrow,swap]{rr}{\cong}
-            \&
-            \&
-            \text{Algebraic}
-            \arrow[visible on=<\iftoggle{static}{1-}{4-}>,leftrightarrow, swap]{ul}{\cong}
-        \end{tikzcd}
+    \begin{tikzcd}[ampersand replacement=\&,row sep=large]
+        \&
+        \text{Denotational}
+        \arrow[visible on=<\iftoggle{static}{1-}{4-}>,leftrightarrow,swap]{dl}{\cong}
+        \&
+        \\
+        \text{Operational}
+        \arrow[visible on=<\iftoggle{static}{1-}{4-}>,leftrightarrow,swap]{rr}{\cong}
+        \&
+        \&
+        \text{Algebraic}
+        \arrow[visible on=<\iftoggle{static}{1-}{4-}>,leftrightarrow, swap]{ul}{\cong}
+    \end{tikzcd}
 
-        \await\await
+    \await\await
 
-        \vspace{1em}
+    \vspace{1em}
 
-        Can adapt for automatic reasoning using \alert{graph rewriting}
+    Can adapt for automatic reasoning using \alert{graph rewriting}
 
-    \end{frame}
+\end{frame}
 \end{document}

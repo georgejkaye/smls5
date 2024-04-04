@@ -15,15 +15,15 @@
 
         \begin{tabular}{rl}
             \dsptikzfig{circuits/components/gates/and} &
-            AND gate \\
-            \dsptikzfig{circuits/components/gates/or} &
-            OR gate \\
+            AND gate                                     \\
+            \dsptikzfig{circuits/components/gates/or}  &
+            OR gate                                      \\
             \dsptikzfig{circuits/components/gates/not} &
-            NOT gate \\
+            NOT gate                                     \\
         \end{tabular}
     \end{minipage}
     \await
-    \begin{minipage}{0.32\textwidth}
+    \begin{minipage}{0.31\textwidth}
         \centering
         \alert{(co)monoid structure}
 
@@ -33,22 +33,22 @@
         \await
         \begin{tabular}{cl}
             \hspace{0.175cm}
-            \dsptikzfig{strings/structure/monoid/init}[colour=comb] &
-            disconnected \\
+            \dsptikzfig{strings/structure/monoid/init}[colour=comb]       &
+            introduce                                                       \\
             \await
             \,\,\dsptikzfig{strings/structure/comonoid/copy}[colour=comb] &
-            fork \\
+            fork                                                            \\
             \await
-            \,\,\dsptikzfig{strings/structure/monoid/merge}[colour=comb] &
-            join \\
+            \,\,\dsptikzfig{strings/structure/monoid/merge}[colour=comb]  &
+            join                                                            \\
             \await
             \,\,\,\,\dsptikzfig{strings/structure/comonoid/discard}[colour=comb]
-            \hspace{0.175cm} &
-            stub \\
+            \hspace{0.175cm}                                              &
+            eliminate                                                       \\
         \end{tabular}
     \end{minipage}
     \await
-    \begin{minipage}{0.32\textwidth}
+    \begin{minipage}{0.33\textwidth}
         \centering
         \alert{categorical structure}
 
@@ -57,19 +57,19 @@
         \renewcommand{\arraystretch}{1.75}
         \begin{tabular}{cl}
             \await
-            \dsptikzfig{strings/category/identity}[colour=comb] &
-            identity \\
+            \dsptikzfig{strings/category/identity}[colour=comb]  &
+            identity                                               \\
             \await
             \dsptikzfig{strings/symmetric/symmetry}[colour=comb] &
-            symmetry \\
+            symmetry                                               \\
         \end{tabular}
     \end{minipage}
 
-    \vspace{0.5em}
+    \vspace{0.75em}
 
     \await
     \alert{Light} circuits \(
-        \dsptikzfig{strings/category/f}[box=F,colour=comb]
+    \dsptikzfig{strings/category/f}[box=F,colour=comb]
     \) only contain gates and structure.
 
     \scriptsize
@@ -91,11 +91,11 @@
 
         \begin{tabular}{rl}
             \dsptikzfig{circuits/components/values/vs}[val=\belnapfalse] &
-            false \\
-            \dsptikzfig{circuits/components/values/vs}[val=\belnaptrue] &
-            true \\
+            false                                                          \\
+            \dsptikzfig{circuits/components/values/vs}[val=\belnaptrue]  &
+            true                                                           \\
             \await
-            \dsptikzfig{circuits/components/values/vs}[val=\top] &
+            \dsptikzfig{circuits/components/values/vs}[val=\top]         &
             short circuit
         \end{tabular}
 
@@ -127,7 +127,7 @@
 
     \begin{center}
         \alert{Dark} circuits \(
-            \dsptikzfig{strings/category/f}[box=F,colour=seq]
+        \dsptikzfig{strings/category/f}[box=F,colour=seq]
         \) may contain delay or feedback.
     \end{center}
 \end{frame}

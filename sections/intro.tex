@@ -71,7 +71,7 @@
 
     How did we get here?
 
-    \includegraphics[width=0.5\textwidth]{imgs/byrne}
+    \includegraphics[width=0.5\textwidth]{imgs/megabus}
 
 \end{frame}
 
@@ -128,30 +128,6 @@
 
 \begin{frame}
     \frametitle{The story so far}
-    \vspace{0.5em}
-
-    \centering
-
-    \await
-
-    \begin{minipage}{0.49\textwidth}
-        \centering
-        \iftoggle{static}{}{\only<2>{\includegraphics[width=0.5\textwidth]{imgs/kaye}}}%
-        \iftoggle{static}{\includegraphics[width=0.5\textwidth]{imgs/kaye-waitrose}}{\only<3->{\includegraphics[width=0.5\textwidth]{imgs/kaye-waitrose}}}%
-
-        \only<1->{\visible<\iftoggle{static}{1}{6-}>{\emph{`Wow, this guy seems pretty groovy'}}}
-    \end{minipage}
-    \begin{minipage}{0.49\textwidth}
-        \centering
-        \iftoggle{static}{}{\only<2-4>{\visible<4>{\includegraphics[width=0.5\textwidth]{imgs/ghica}}}}%
-        \iftoggle{static}{\includegraphics[width=0.5\textwidth]{imgs/ghica-ocaml}}{\only<5->{\includegraphics[width=0.5\textwidth]{imgs/ghica-ocaml}}}%
-
-        \only<\iftoggle{static}{1}{2-}>{\visible<\iftoggle{static}{1}{7}>{\emph{*OCaml noises*}}}
-    \end{minipage}
-\end{frame}
-
-\begin{frame}
-    \frametitle{The story so far}
 
     \centering
 
@@ -164,81 +140,45 @@
 
     \centering
 
-    \begin{minipage}{0.49\textwidth}
+    \begin{minipage}{0.45\textwidth}
         \centering
-        \iftoggle{static}{}{\only<1>{\includegraphics[width=0.5\textwidth]{imgs/kaye-grad}}}%
-        \iftoggle{static}{\includegraphics[width=0.5\textwidth]{imgs/kaye-phd}}{\only<2->{\includegraphics[width=0.5\textwidth]{imgs/kaye-phd}}}%
 
-        \visible<\iftoggle{static}{1}{5-}>{\emph{`No'}}
+        \phantom{\textbf{Dan Ghica}}
 
-        \visible<\iftoggle{static}{1}{7-}>{\emph{`Okay'}}
+        \vspace{0.5em}
+
+        \includegraphics[width=8em]{imgs/ghica}
+
+        \visible<\iftoggle{static}{1}{2-}>{\emph{`Do you know category theory'}}
+
+        \visible<\iftoggle{static}{1}{4-}>{\emph{`Do you want to do circuits stuff'}}
     \end{minipage}
-    \begin{minipage}{0.49\textwidth}
+    \begin{minipage}{0.25\textwidth}
         \centering
-        \visible<\iftoggle{static}{1}{3-}>{\includegraphics[width=0.5\textwidth]{imgs/ghica}}
 
-        \visible<\iftoggle{static}{1}{4-}>{\emph{`Do you know category theory'}}
+        \phantom{\textbf{Me}}
 
-        \visible<\iftoggle{static}{1}{6-}>{\emph{`Do you want to do circuits stuff'}}
+        \vspace{0.5em}
+
+        \includegraphics[width=8em]{imgs/kaye}%
+
+        \visible<\iftoggle{static}{1}{3-}>{\emph{`No'}}
+
+        \visible<\iftoggle{static}{1}{5-}>{\emph{`Okay'}}
     \end{minipage}
-\end{frame}
+    \visible<\iftoggle{static}{1}{6-}>{%
+        \begin{minipage}{0.25\textwidth}
+            \centering
 
-\begin{frame}
-    \frametitle{The story so far}
+            \textbf{David Sprunger}
 
-    \centering
+            \vspace{0.5em}
 
-    \scalebox{8}{\textbf{2021}}
+            \includegraphics[width=8em]{imgs/sprunger}
 
-\end{frame}
+            \phantom{hello}
 
-\begin{frame}
-    \frametitle{The story so far}
-
-    \centering
-
-    \vspace{1em}
-
-    \(
-        \visible<\iftoggle{static}{1}{2-}>{\includegraphics[width=0.2\textwidth]{imgs/ghica}}
-        \visible<\iftoggle{static}{1}{3-}>{\raisebox{3em}{ \(+\) }\includegraphics[width=0.2\textwidth]{imgs/zanasi}}
-        \visible<\iftoggle{static}{1}{4-}>{\raisebox{3em}{ \(=\) } \includegraphics[width=0.2\textwidth]{imgs/money}}
-    \)
-
-    \vspace{1em}
-
-    \(
-        \visible<\iftoggle{static}{1}{5-}>{\includegraphics[width=0.2\textwidth]{imgs/ghica}}
-        \visible<\iftoggle{static}{1}{6-}>{\raisebox{3em}{ \(+\) }\includegraphics[width=0.2\textwidth]{imgs/money}}
-        \visible<\iftoggle{static}{1}{7-}>{\raisebox{3em}{ \(=\) } \includegraphics[width=0.2\textwidth]{imgs/sprunger}}
-    \)
-
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{The story so far}
-
-    \centering
-
-    \includegraphics[width=0.25\textwidth]{imgs/sprunger}
-
-    \LARGE
-    \textbf{David Sprunger}
-
-    \await
-    \normalsize
-    (now at Indiana State University)
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{Let's get dangerous}
-
-    \centering
-
-    \includegraphics[width=0.25\textwidth]{imgs/ghica}
-    \includegraphics[width=0.25\textwidth]{imgs/kaye}
-    \includegraphics[width=0.25\textwidth]{imgs/sprunger}
-
+            \emph{`I will help too'}
+        \end{minipage}%
+    }
 \end{frame}
